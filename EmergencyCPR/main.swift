@@ -1,11 +1,19 @@
-//
-//  main.swift
-//  EmergencyCPR
-//
-//  Created by user197822 on 6/12/21.
-//
+protocol AdvanceLifeSupport {
+    func performCpr()
+}
 
-import Foundation
+class EmergencyCallHandler{
+    var delegate : AdvanceLifeSupport?
+    
+    func emergencyCall(){
+        delegate?.performCpr()
+    }
+}
 
-print("Hello, World!")
-
+/*
+ Emergency Call handler
+ handles the emergency calls
+ It routes the emergency call
+ to the person who adopts Advance
+ life support protocol
+ */
